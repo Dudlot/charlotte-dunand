@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${urbanist.variable} ${charlotteFont.variable}`}>
-      <body className={`${urbanist.className} bg-gradient-to-br from-neutral-500 to-neutral-600 antialiased`}> 
+      <body className={`${urbanist.className} bg-neutral-500 antialiased`}> 
         {children}
       </body>
     </html>

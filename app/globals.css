@@ -2,3 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ======================== */
+/* COMPOSANTS PERSONNALISÉS */
+/* ======================== */
+
+@layer components {
+  /* Lien animé pour le footer */
+  .footer-link {
+    @apply relative text-neutral-300 transition-all duration-300 ease-out;
+    @apply hover:text-secondary;
+  }
+  
+  .footer-link::after {
+    content: '';
+    @apply absolute left-0 bottom-0 w-0 h-0.5 bg-secondary;
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .footer-link:hover::after {
+    @apply w-full;
+  }
+}
+
+/* ===================== */
+/* ANIMATIONS AVANCÉES   */
+/* ===================== */
+
+@layer utilities {
+  /* Animation de soulignement qui glisse */
+  .link-underline-slide {
+    @apply relative inline-block;
+  }
+  
+  .link-underline-slide::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, #E6E4D8, #E6E4D8);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .link-underline-slide:hover::before {
+    transform: scaleX(1);
+  }
+}
