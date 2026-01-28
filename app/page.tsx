@@ -1,13 +1,14 @@
 import Footer from './components/layout/Footer';
 import Image from './components/ui/Image';
+import HandwritingTitle from './components/HandwritingTitle';
 
 export default function Home() {
   return (
     <>
       <section id='hero' className='px-6 md:px-12 lg:px-24 pb-16 md:pb-18 lg:pb-24 bg-secondary-500'>
         <div className='flex flex-col justify-center text-center'>
-          <Image src="/img/Charlotte-Dunand.webp" alt="Charlotte Dunand" className="w-1/3 mx-auto" />
-          <h1 className='font-charlotte text-neutral-500 text-9xl -mt-16'>Charlotte Dunand</h1>
+          <Image src="/img/Charlotte-Dunand.webp" alt="Charlotte Dunand" className="w-1/3 mx-auto -m-b-16" />
+          <HandwritingTitle />
           <h2 className='text-neutral-500 text-xl uppercase font-extralight'>Architecte digitale et communication humaine</h2>
         </div>
       </section>
