@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "journal": "Journal",
+    "projets": "Projets",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "© {year} Charlotte Dunand",
+    "tagline": "Architecte digitale"
+  },
+  "cta": {
+    "contact": "Me contacter",
+    "voir_projets": "Voir les projets",
+    "lire_article": "Lire l'article"
+  }
+}

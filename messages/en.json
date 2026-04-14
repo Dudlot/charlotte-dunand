@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "Home",
+    "journal": "Journal",
+    "projets": "Projects",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "© {year} Charlotte Dunand",
+    "tagline": "Digital architect"
+  },
+  "cta": {
+    "contact": "Get in touch",
+    "voir_projets": "View projects",
+    "lire_article": "Read article"
+  }
+}
