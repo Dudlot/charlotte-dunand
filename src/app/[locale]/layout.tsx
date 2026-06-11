@@ -10,7 +10,7 @@ export function generateStaticParams() {
 export const metadata: Metadata = {
   title: "Charlotte Dunand — Architecte digitale",
   description:
-    "Portfolio et journal de Charlotte Dunand, architecte digitale.",
+    "Sites web, automatisations, design : tout ce qu'il faut pour que votre entreprise tourne sans vous épuiser.",
 };
 
 export default async function LocaleLayout({
