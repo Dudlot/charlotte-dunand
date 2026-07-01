@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /merci
+
+Sitemap: https://charlotte-dunand.com/sitemap.xml

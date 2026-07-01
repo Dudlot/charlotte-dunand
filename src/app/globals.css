@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --cerise: #A42731;
+  --vin: #3A1F1E;
+  --froid: #E5E5E5;
 }
 
 @theme inline {
@@ -26,18 +29,112 @@ body {
 }
 
 .gradient-primary {
-  background: #3A1F1E;
-  background: -webkit-linear-gradient(320deg, rgba(58, 31, 30, 1) 0%, rgba(164, 39, 49, 1) 61%);
-  background: -moz-linear-gradient(320deg, rgba(58, 31, 30, 1) 0%, rgba(164, 39, 49, 1) 61%);
   background: linear-gradient(320deg, rgba(58, 31, 30, 1) 0%, rgba(164, 39, 49, 1) 61%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3A1F1E", endColorstr="#A42731", GradientType=0);
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
 }
 
+@keyframes gradientShift {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+
 h1, .h1 {
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+h2, .h2 {
   font-size: 4rem;
+  line-height: 100%;
+}
+
+h3, .h3 {
+  font-weight: 600;
+  line-height: 100%;
+  font-size: 2.5rem;
+}
+
+h4, .h4 {
+  font-family: var(--font-calloveya);
+  font-size: 2.5rem;
+}
+
+h5, .h5 {
+  font-size: 2rem;
+  line-height: 100%;
+  font-weight: 400;
+}
+
+h2 span, .h5 span {
+  color: var(--cerise);
+}
+
+.text-link {
   font-weight: 600;
 }
 
-.white {
+/**** ---- Homepage ---- ****/
+#hero.gradient-primary a{
   color: #fff;
 }
+
+.faq-item {
+  border-bottom: 1px solid white;
+  padding-bottom: 1rem;
+}
+
+
+/**** ---- Pilier ----****/
+.approche-item {
+  border: 1px solid white;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+ul.custom-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.custom-list li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+ul.custom-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--cerise);
+}
+
+
+/**** ---- Responsive ---- ****/
+@media (max-width: 375px) { 
+  h1, .h1 {
+    font-size: 2.25rem;
+  }
+
+  h2, .h2 {
+    font-size: 2rem;
+  }
+  h3, .h3 {
+    font-size: 1.25rem;
+  }
+
+  h4, .h4 {
+    font-size: 1.5rem;
+  }
+  h5, .h5 {
+    font-size: 1.25rem;
+  }
+ }
