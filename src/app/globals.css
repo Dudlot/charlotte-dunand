@@ -15,13 +15,6 @@
   --font-calloveya: var(--font-calloveya);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -121,20 +114,23 @@ ul.custom-list li::before {
 /**** ---- Responsive ---- ****/
 @media (max-width: 375px) { 
   h1, .h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   h2, .h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
   h3, .h3 {
     font-size: 1.25rem;
   }
 
   h4, .h4 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   h5, .h5 {
     font-size: 1.25rem;
+  }
+  p {
+    font-size: 0.74rem
   }
  }
