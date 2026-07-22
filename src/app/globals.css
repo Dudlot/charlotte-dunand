@@ -117,7 +117,7 @@ ul.custom-list li::before {
 
 
 /**** ---- Responsive ---- ****/
-@media (max-width: 375px) { 
+@media (max-width: 500px) { 
   h1, .h1 {
     font-size: 2rem;
   }
