@@ -6,6 +6,9 @@ import FadeInLeft from '@/components/layout/FadeInLeft';
 import FadeInRight from '@/components/layout/FadeInRight';
 import OffresSection from '@/components/layout/OffresSection';
 
+import { getCurrency } from '@/lib/currency';
+import { price } from '@/lib/prices';
+
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -52,7 +55,9 @@ const faqStructuredData = {
   ]
 }
 
-export default function SuiviEvolution() {
+export default async function SuiviEvolution() {
+  const currency = await getCurrency();
+
   return (
     <main>
         <script
@@ -109,36 +114,51 @@ export default function SuiviEvolution() {
         ctaHref="/contact"
         ctaLabel="Remplir mon brief"
         offres={[
-            {
-            title: "Sécurité & Stabilité",
-            description: "La base : votre site reste à jour, sauvegardé et sécurisé. Vous n'avez pas à y penser.",
-            features: [
-                "Mises à jour techniques régulières",
-                "Sauvegardes automatiques",
-                "Surveillance et sécurité",
-            ],
-            price: "Des 90 chf/mois.",
-            },
-            {
-            title: "Data & Conversion",
-            description: "En plus de la sécurité, un suivi de vos performances pour savoir ce qui fonctionne et identifier les axes d'amélioration.",
-            features: [
-                "Tout le Palier 1 (sécurité, mises à jour, sauvegardes)",
-                "Rapport trimestriel : trafic, comportement des visiteurs, taux de conversion",
-                "Appel de débrief pour analyser les résultats ensemble",
-            ],
-            price: "Des 250 chf/mois.",
-            },
-            {
-            title: "Évolution",
-            description: "Votre activité a des projets d'évolution déjà identifiés : un nouveau service, une boutique en ligne, un système de réservation ? Ce palier garantit que ces évolutions seront prises en charge dès qu'elles seront prêtes, sans recommencer un nouveau processus à chaque fois.",
-            features: [
-                "Tout le Palier 2 (sécurité, data, appels de débrief)",
-                "Temps de développement réservé pour vos évolutions planifiées",
-                "Mise en œuvre prioritaire, sans nouveau brief à chaque demande",
-            ],
-            price: "Sur mesure",
-            },
+           {
+  title: "Sécurité & Stabilité",
+  description: "L'assurance tous risques. Votre site reste à jour, sauvegardé et surveillé : vous ne mettez plus jamais les mains dans la technique.",
+  featuresLabel: "Ce qui est compris",
+  features: [
+    "Mises à jour régulières : thèmes, plugins (si WordPress) ou CMS, pour éviter les failles de sécurité",
+    "Sauvegardes cloud hebdomadaires ou quotidiennes de tout le site et des bases de données",
+    "Optimisation des images : compression et conversion pour garder la rapidité",
+    "Scan complet du site pour vérifier les vulnérabilités",
+    "3h d'interventions supplémentaires comprises par an",
+    "Rapport mensuel : un email ou PDF généré automatiquement avec le résumé de l'activité",
+  ],
+  price: `Des ${price('securite', currency)}`,
+  ctaHref: "/contact",
+  ctaLabel: "Démarrer avec la base",
+},
+{
+  title: "Data & Conversion",
+  description: "Tout Sécurité & Stabilité, plus une analyse régulière de vos performances pour savoir ce qui fonctionne et agir dessus.",
+  featuresLabel: "Ce qui est compris",
+  features: [
+    "Tout Sécurité & Stabilité",
+    "Tracking des performances : suivi Google Analytics / Search Console (visiteurs, sources, comportement)",
+    "Audit de conversion : identification des points de blocage sur le site",
+    "Ajustements stratégiques : optimisation des CTA, textes, ou automatisations selon les résultats",
+    "Recommandations SEO",
+    "Vidéo Loom trimestrielle : 5 minutes pour résumer vos chiffres et mes recommandations",
+  ],
+  price: `Des ${price('data', currency)}`,
+  ctaHref: "/contact",
+  ctaLabel: "En savoir plus",
+},
+{
+  title: "Évolution",
+  description: "Votre activité a des projets identifiés : un nouveau service, une boutique, un système de réservation ? Ce palier garantit que ces évolutions seront prises en charge dès qu'elles sont prêtes, sans recommencer un nouveau processus à chaque fois.",
+  featuresLabel: "Ce qui est compris",
+  features: [
+    "Tout Data & Conversion",
+    "Temps de développement réservé pour vos évolutions planifiées",
+    "Mise en œuvre prioritaire, sans nouveau brief à chaque demande",
+  ],
+  price: "Sur mesure, discutons ensemble",
+  ctaHref: "/contact",
+  ctaLabel: "Discutons de votre projet",
+},
         ]}
         />
 

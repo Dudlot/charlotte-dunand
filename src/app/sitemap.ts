@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: "https://charlotte-dunand.com/ingenierie-automatisations",
+      url: "https://charlotte-dunand.com/ingenierie-automatisation",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
@@ -45,13 +45,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: "https://charlotte-dunand.com/mentions-legales",
+      url: "https://charlotte-dunand.com/legales/mentions-politiques",
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      url: "https://charlotte-dunand.com/cgv",
+      url: "https://charlotte-dunand.com/legales/cgv",
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.3,

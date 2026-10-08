@@ -5,12 +5,14 @@ import FadeInStagger from '@/components/layout/FadeInStagger';
 import FadeInLeft from '@/components/layout/FadeInLeft';
 import FadeInRight from '@/components/layout/FadeInRight';
 import OffresSection from '@/components/layout/OffresSection';
+import Image from 'next/image';
+
 
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Vision | Charlotte Dunand",
-  description: "Graphiste de formation, passée par le code, l'entrepreneuriat et l'IA : découvrez le parcours et la philosophie derrière Charlotte Dunand, Architecte Digitale basée à Genève.",
+  description: "Graphiste de formation, passée par le code, l'entrepreneuriat et l'IA : découvrez le parcours et la philosophie derrière Charlotte Dunand, Architecte Digitale entre la Haute-Savoie et la Suisse romande.",
 };
 
 export default function Vision() {
@@ -29,22 +31,37 @@ export default function Vision() {
 
         <section id="problem">
             <div className="container mx-auto py-36 px-8">
-                <FadeInLeft>
-                    <p className='mb-9 max-w-3xl'>Tout a commencé par le design. Une formation de graphiste, 
-                        l&apos;envie de créer des choses qui ont de l&apos;allure et puis la découverte du code, presque par curiosité. 
-                        Ce qui n&apos;était qu&apos;une compétence technique en plus est devenu une révélation : donner vie à un projet, pas seulement l&apos;imaginer.
-                    </p>
-                </FadeInLeft>
-                <FadeInLeft>
-                    <p className='mb-9 max-w-3xl pl-16'>De là, tout s&apos;est enchaîné naturellement. 
-                        L&apos;entrepreneuriat, parce qu&apos;il fallait bien structurer cette nouvelle façon de travailler. 
-                        L&apos;intelligence artificielle, parce que les possibilités décuplaient à vue d&apos;œil. 
-                        Et au milieu de tout ça, une envie qui n&apos;a jamais changé : accompagner des gens ambitieux sur des projets qui sortent du cadre.
-                    </p>
-                </FadeInLeft>
-                <FadeInLeft>
-                    <p className='mb-9 max-w-3xl pl-32 text-[var(--cerise)]'>Architecte Digitale, c&apos;est le titre qui est resté parce qu&apos;aucun autre ne couvrait vraiment ce que recouvre ce métier aujourd&apos;hui.</p>
-                </FadeInLeft>
+                <div className="flex items-center">
+                    <div>
+                        <FadeInLeft>
+                            <p className='mb-9 max-w-3xl'>Tout a commencé par le design. Une formation de graphiste, 
+                                l&apos;envie de créer des choses qui ont de l&apos;allure et puis la découverte du code, presque par curiosité. 
+                                Ce qui n&apos;était qu&apos;une compétence technique en plus est devenu une révélation : donner vie à un projet, pas seulement l&apos;imaginer.
+                            </p>
+                        </FadeInLeft>
+                        <FadeInLeft>
+                            <p className='mb-9 max-w-3xl pl-16'>De là, tout s&apos;est enchaîné naturellement. 
+                                L&apos;entrepreneuriat, parce qu&apos;il fallait bien structurer cette nouvelle façon de travailler. 
+                                L&apos;intelligence artificielle, parce que les possibilités décuplaient à vue d&apos;œil. 
+                                Et au milieu de tout ça, une envie qui n&apos;a jamais changé : accompagner des gens ambitieux sur des projets qui sortent du cadre.
+                            </p>
+                        </FadeInLeft>
+                        <FadeInLeft>
+                            <p className='mb-9 max-w-3xl pl-32 text-[var(--cerise)]'>Architecte Digitale, c&apos;est le titre qui est resté parce qu&apos;aucun autre ne couvrait vraiment ce que recouvre ce métier aujourd&apos;hui.</p>
+                        </FadeInLeft>
+                    </div>
+                    <div className='px-24'>
+                        <FadeInRight>
+                        <Image
+                            src="/img/dude-cafe-nb1.jpeg"
+                            alt="Charlotte Dunand au café"
+                            width={844}
+                            height={1500}
+                            className="w-full h-auto rounded-2xl"
+                            />
+                            </FadeInRight>
+                    </div>
+                </div>
             </div>
         </section>
         
@@ -61,7 +78,7 @@ export default function Vision() {
                             <h3 className='pt-18'>Un cadre clair, pour vous comme pour moi</h3>
                         </div>
                         <div className="approche-item flex-1 text-white flex flex-col justify-between">
-                            <p>L&apos;Les projets ont des hauts et des bas. Je préfère montrer comment les choses se construisent vraiment plutôt qu&apos;une image lissée.</p>
+                            <p>Les projets ont des hauts et des bas. Je préfère montrer comment les choses se construisent vraiment plutôt qu&apos;une image lissée.</p>
                             <h3 className='pt-18'>La transparence, même quand ce n&apos;est pas parfait</h3>
                         </div>
                     </div>
@@ -73,22 +90,13 @@ export default function Vision() {
         <div id="geneve">
             <div className="flex flex-col sm:flex-row">
                 <div className="flex-1 py-36 px-8">
-                    <h3 className="mb-4">Un pied à Genève, une portée plus large</h3>
-                    <p className="text-xs">Basée à Genève, avec une activité qui s&apos;étend bien au-delà. Le travail se fait principalement à distance, les échanges en personne se planifient au cas par cas, selon les disponibilités.</p>
-                    {/* <h5 className='mt-8'>Chem. du Pavillon 2, <br />1218 Le Grand-Saconnex, Suisse</h5> */}
-                    <h5 className='mt-8'>Rue de Chantepoulet 10, <br />1201 Genève, Suisse</h5>
+                    <h3 className="mb-4">Un pied en Haute-Savoie, une portée plus large</h3>
+                    <p className="text-xs">Basée en Haute-Savoie, avec une activité qui s&apos;étend à la Suisse romande et bien au-delà. Le travail se fait principalement à distance, les échanges en personne se planifient au cas par cas, selon les disponibilités.</p>
                 </div>
-                <div className="flex-1">
-                    {/*
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2759.5912467728012!2d6.119571512163933!3d46.23847278132535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c65f9cddfb799%3A0x5761203002a597ee!2sOctagon!5e0!3m2!1sfr!2sfr!4v1781428145547!5m2!1sfr!2sfr" 
-                    width="100%" 
-                    height="100%" 
-                    style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-                    */}
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2761.1030553357045!2d6.140857012162567!3d46.20840488335653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c653204a1ea2d%3A0xa15ff66277a404ba!2zQ2FsbGlvcMOpZSBTw6BybA!5e0!3m2!1sfr!2sfr!4v1782890464628!5m2!1sfr!2sfr" 
-                    width="100%" 
-                    height="100%" 
-                    style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                <div className="flex-1 gradient-primary text-white flex flex-col justify-center gap-6 py-24 px-8">
+                    <p className="h3">Haute-Savoie</p>
+                    <p className="h3">Suisse romande</p>
+                    <p className="h3">À distance, partout ailleurs</p>
                 </div>
             </div>
         </div>

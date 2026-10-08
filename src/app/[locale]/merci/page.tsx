@@ -8,6 +8,7 @@ import Button from '@/components/ui/Button';
 export const metadata: Metadata = {
   title: "Merci — Démarrer votre projet | Charlotte Dunand",
   description: "Page de prise de rendez-vous.",
+  robots: { index: false, follow: false },
 };
 
 export default function Merci() {
@@ -20,7 +21,7 @@ export default function Merci() {
                 <h1 className='pt-36'>Merci, c&apos;est noté.</h1>
                 <p>Votre brief vient d&apos;arriver. La dernière étape : choisissez comment on se retrouve.</p>
                 <Button href='https://zcal.co/charlottedunand/decouverte' target="_blank" rel="noopener noreferrer">Réserver un appel (visio ou téléphone)</Button>
-                <Button href='https://zcal.co/charlottedunand/cafe' target="_blank" rel="noopener noreferrer">Réserver un rendez-vous au bureau, à Genève</Button>
+                <Button href='https://zcal.co/charlottedunand/cafe' target="_blank" rel="noopener noreferrer">Réserver un rendez-vous en personne</Button>
             </div>
         </section>
 

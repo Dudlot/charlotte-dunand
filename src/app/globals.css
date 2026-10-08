@@ -115,6 +115,44 @@ ul.custom-list li::before {
   background-color: var(--cerise);
 }
 
+.stuff-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+gap: 1.25rem;
+}
+
+.stuff-item {
+  border: var(--cerise) 1px solid;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  justify-content: space-around
+}
+
+.stuff-item h3 {
+  color: var(--cerise);
+  margin-bottom: .5rem;
+}
+.stuff-item p {
+  margin-top: .5rem;
+}
+.stuff-item a {
+  margin-top: .5rem;
+  font-weight: bold;
+}
+
+.stuff-item a:hover {
+  color: var(--cerise);
+}
+
+.stuff1 { grid-area: 1 / 1 / 3 / 2; }
+.stuff2 { grid-area: 1 / 2 / 2 / 3; }
+.stuff3 { grid-area: 2 / 2 / 3 / 3; }
+
 
 /**** ---- Responsive ---- ****/
 @media (max-width: 500px) { 

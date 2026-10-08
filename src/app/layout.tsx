@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://charlotte-dunand.com'),
 };
 
-// Root layout — lang is set per-locale in app/[locale]/layout.tsx
+// Root layout — site uniquement en français pour l'instant
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -16,18 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html
+      lang="fr"
       suppressHydrationWarning
       className={`${alphazet.variable} ${calloveya.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col overflow-x-hidden">
-        <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-NBLTTSXG"
-          height="0"
-          width="0"
-          style={{ display: 'none', visibility: 'hidden' }}
-        />
-      </noscript>
         {children}
         <CookieBanner />
         <GoogleAnalytics />

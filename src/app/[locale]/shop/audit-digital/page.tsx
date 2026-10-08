@@ -2,14 +2,19 @@ import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import AuditForm from '@/components/forms/AuditForm';
 
+import { getCurrency } from '@/lib/currency';
+import { price } from '@/lib/prices';
+
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Merci — Démarrer votre projet | Charlotte Dunand",
-  description: "Page de prise de rendez-vous.",
+  title: "Audit Digital — Charlotte Dunand",
+  description: "Une analyse complète de votre écosystème digital, un appel de débrief et un rapport avec des recommandations claires.",
 };
 
-export default function AuditDigital() {
+export default async function AuditDigital() {
+  const currency = await getCurrency();
+
   return (
     <main>
         <section id="hero" className='gradient-primary'>
@@ -31,16 +36,17 @@ export default function AuditDigital() {
                             <li>Appel de débrief pour discuter des résultats</li>
                             <li>Rapport détaillé avec recommandations claires</li>
                         </ul>
-                        <p className='h4'>500 chf</p>
-                        <p className='pb-8 text-xs'>Une fois le formulaire envoyé, vous serez redirigé vers le paiement sécurisé. Délai : sous une semaine après réception du formulaire complet.</p>
+                        <p className='h4'>{price('audit', currency)}</p>
+                        <p className='pb-8 text-xs'>Une fois le formulaire envoyé, je vérifie vos informations et vous recevez sous 48h un email de prise en charge avec le lien de paiement sécurisé. Délai : rapport sous une semaine après le paiement.</p>
                         <h3>Le process</h3>
-                        <p className='py-2'><span className='font-semibold'>1. Vous remplissez le formulaire et payez</span>, quelques informations pour qu&apos;on puisse démarrer (accès, contexte)</p>
-                        <p className='py-2'>2. Si tous les accès sont transmis, <span className='font-semibold'>on commence l&apos;analyse</span>. On passe en revue votre écosystème : structure, performance, ce qui fonctionne, ce qui freine</p>
-                        <p className='py-2'><span className='font-semibold'>3. L&apos;appel de débrief</span>, on discute ensemble des résultats, vous pouvez poser vos questions</p>
-                        <p className='py-2'><span className='font-semibold'>4. Le rapport</span>, vous recevez un document avec les recommandations claires : ajustements ciblés ou refonte complète</p>
+                        <p className='py-2'><span className='font-semibold'>1. Vous remplissez le formulaire</span>, quelques informations pour qu&apos;on puisse démarrer (accès, contexte)</p>
+                        <p className='py-2'><span className='font-semibold'>2. Je vérifie et je vous envoie le lien de paiement</span>, par email sous 48h, avec la confirmation de prise en charge</p>
+                        <p className='py-2'>3. Une fois le paiement reçu et les accès transmis, <span className='font-semibold'>on commence l&apos;analyse</span>. On passe en revue votre écosystème : structure, performance, ce qui fonctionne, ce qui freine</p>
+                        <p className='py-2'><span className='font-semibold'>4. L&apos;appel de débrief</span>, on discute ensemble des résultats, vous pouvez poser vos questions</p>
+                        <p className='py-2'><span className='font-semibold'>5. Le rapport</span>, vous recevez un document avec les recommandations claires : ajustements ciblés ou refonte complète</p>
                     </div>
                     <div className="flex-2">
-                        <AuditForm />
+                        <AuditForm currency={currency} />
                     </div>
                 </div>
             </div>
@@ -48,7 +54,7 @@ export default function AuditDigital() {
 
         <section id='message' className='bg-[var(--vin)]'>
             <div className="container mx-auto py-36 px-8 text-white text-center">
-                <h2>Prêt à démarrer ? Le paiement se fait en un clic, sécurisé via Stripe.</h2>
+                <h2>Prêt à démarrer ? Remplissez le formulaire, je m&apos;occupe du reste.</h2>
             </div>
         </section>
 
