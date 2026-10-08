@@ -84,6 +84,7 @@ export default function MentionsPolitiques() {
                     <li><span className='font-semibold'>Votre devise</span> (cookie « currency », 1 an) : retient la devise choisie pour l&apos;affichage des prix (CHF ou €)</li>
                     <li><span className='font-semibold'>Mesure d&apos;audience</span> (cookies Google Analytics « _ga », 13 mois maximum) : déposés uniquement si vous les acceptez</li>
                 </ul>
+                <p className='pt-4'>Pour afficher les prix dans la bonne devise, le pays du visiteur est déduit de son adresse IP, directement sur le serveur du site : l&apos;adresse IP n&apos;est ni conservée, ni transmise à un tiers. <a href='https://db-ip.com' target='_blank' rel='noopener noreferrer' className='underline'>IP Geolocation by DB-IP</a>.</p>
                 <p className='pt-4'>Lors de votre première visite, un bandeau vous permet d&apos;accepter ou de refuser les cookies de mesure d&apos;audience. Vous pouvez modifier votre choix à tout moment grâce au lien « Gérer les cookies » en bas de chaque page.</p>
 
                 <h3 className='pt-8'>Vos droits</h3>

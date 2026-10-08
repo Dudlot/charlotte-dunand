@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p 3000",
-    "lint": "eslint"
+    "lint": "eslint",
+    "update-geoip": "sh scripts/update-geoip.sh"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
+    "maxmind": "^5.0.7",
     "motion": "^12.40.0",
     "next": "16.2.3",
     "next-intl": "^4.9.1",
