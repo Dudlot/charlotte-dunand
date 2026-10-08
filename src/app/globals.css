@@ -176,4 +176,9 @@ gap: 1.25rem;
   p {
     font-size: 0.74rem
   }
+  /* Prix : la police manuscrite reste lisible au-dessus de la taille .h4 mobile */
+  .h4.price {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
  }

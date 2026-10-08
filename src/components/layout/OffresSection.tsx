@@ -67,7 +67,7 @@ function OffreContent({ offre }: { offre: Offre }) {
             <li key={i}>{f}</li>
           ))}
         </ul>
-        <p className="h4 mb-4">{offre.price}</p>
+        <p className="h4 price mb-4">{offre.price}</p>
         <ButtonCerise href={offre.ctaHref}>{offre.ctaLabel}</ButtonCerise>
       </div>
     </>
