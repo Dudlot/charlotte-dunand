@@ -36,7 +36,7 @@ export default async function AuditDigital() {
                             <li>Appel de débrief pour discuter des résultats</li>
                             <li>Rapport détaillé avec recommandations claires</li>
                         </ul>
-                        <p className='h4'>{price('audit', currency)}</p>
+                        <p className='h4 price'>{price('audit', currency)}</p>
                         <p className='pb-8 text-xs'>Une fois le formulaire envoyé, je vérifie vos informations et vous recevez sous 48h un email de prise en charge avec le lien de paiement sécurisé. Délai : rapport sous une semaine après le paiement.</p>
                         <h3>Le process</h3>
                         <p className='py-2'><span className='font-semibold'>1. Vous remplissez le formulaire</span>, quelques informations pour qu&apos;on puisse démarrer (accès, contexte)</p>

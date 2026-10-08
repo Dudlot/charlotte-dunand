@@ -31,7 +31,7 @@ export default function OffreItem({ title, description, features, price, progres
             <li key={i}>{f}</li>
           ))}
         </ul>
-        <p className="h4">{price}</p>
+        <p className="h4 price">{price}</p>
       </div>
     </motion.div>
   );
