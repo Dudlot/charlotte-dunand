@@ -12,10 +12,10 @@ import FadeInRight from '@/components/layout/FadeInRight';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Charlotte Dunand — Architecte Digitale & COO | Haute-Savoie & Suisse romande",
+  title: "Charlotte Dunand — Architecte Digitale | Haute-Savoie & Suisse romande",
   description: "Sites web, automatisations, systèmes — Charlotte Dunand construit les écosystèmes digitaux qui font tourner les entreprises sans les épuiser. Basée en Haute-Savoie, active en Suisse romande et à distance partout ailleurs.",
   openGraph: {
-    title: "Charlotte Dunand — Architecte Digitale & COO | Haute-Savoie & Suisse romande",
+    title: "Charlotte Dunand — Architecte Digitale | Haute-Savoie & Suisse romande",
     description: "Sites web, automatisations, systèmes : des écosystèmes digitaux qui font tourner les entreprises sans les épuiser.",
     images: [
       {
