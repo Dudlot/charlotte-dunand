@@ -73,7 +73,6 @@ export default function Header() {
         <ul className="flex flex-col gap-8 list-none text-center text-2xl text-white">
           <MobileNavAccordion label="Services" subLinks={servicesLinks} onLinkClick={() => setIsOpen(false)} />
           <NavLink href="/vision" onClick={() => setIsOpen(false)}>Vision</NavLink>
-          <NavLink href="/shop/audit-digital" onClick={() => setIsOpen(false)}>Audit</NavLink>
           <NavLink href="/contact" onClick={() => setIsOpen(false)}>Contact</NavLink>
         </ul>
       </div>
