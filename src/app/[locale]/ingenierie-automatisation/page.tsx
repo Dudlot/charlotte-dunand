@@ -135,7 +135,8 @@ export default async function IngenierieAutomatisation() {
         "Setup de Base — connexions et automatisations simples (ex : formulaire connecté à votre CRM)",
         "Workflow Complet — un processus métier entier repensé et automatisé (ex : onboarding client de A à Z)",
       ],
-      price: "Tarif défini après audit",
+      // Prix affiché en police manuscrite (Calloveya) : pas d'accents
+      price: "Tarif defini apres audit",
       ctaHref: "/contact",
       ctaLabel: "Démarrer par l'audit",
     },

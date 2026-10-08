@@ -59,7 +59,8 @@ export default function Services() {
                 <p className="h1">02</p>
                 <div className="text-right mb-8 sm:mb-28">
                   <h3 className="text-xl sm:text-2xl">Ingénierie &amp; Automatisations</h3>
-                  <h4 className="text-base sm:text-lg">Ingénierie &amp; Automatisations</h4>
+                  {/* h4 en police manuscrite (Calloveya) : pas d'accents, la police ne les contient pas */}
+                  <h4 className="text-base sm:text-lg">Ingenierie &amp; Automatisations</h4>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row justify-between text-white sm:items-end items-start gap-2">
@@ -82,7 +83,7 @@ export default function Services() {
                 <p className="h1">03</p>
                 <div className="text-right mb-8 sm:mb-28">
                   <h3 className="text-xl sm:text-2xl">Suivi &amp; évolution</h3>
-                  <h4 className="text-base sm:text-lg">Suivi &amp; évolution</h4>
+                  <h4 className="text-base sm:text-lg">Suivi &amp; evolution</h4>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row justify-between text-white sm:items-end items-start gap-2">
