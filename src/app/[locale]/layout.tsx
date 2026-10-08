@@ -7,7 +7,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Charlotte Dunand",
-  "description": "Architecte Digitale & COO indépendante. Sites web, automatisations et systèmes sur-mesure pour les entreprises qui veulent grandir sans s'épuiser.",
+  "description": "Architecte Digitale indépendante. Sites web, automatisations et systèmes sur-mesure pour les entreprises qui veulent grandir sans s'épuiser.",
   "url": "https://charlotte-dunand.com",
   "email": "contact@charlotte-dunand.com",
   "telephone": "+33626185358",
