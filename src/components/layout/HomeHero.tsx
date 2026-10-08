@@ -23,11 +23,13 @@ export default function Hero() {
         preload="auto"
         aria-hidden="true"
       >
-        <source src="/videos/HOMEPAGE.webm" type="video/webm" />
+        {/* WebM en AV1 : le codec précisé permet aux navigateurs qui ne le lisent pas (la plupart des iPhone) de passer au MP4 */}
+        <source src="/videos/HOMEPAGE.webm" type='video/webm; codecs="av01.0.08M.08"' />
         <source src="/videos/HOMEPAGE.mp4" type="video/mp4" />
       </video>
 
-      <div className="relative z-10">
+      {/* z-20 : le menu mobile (fixed, dans le header) doit passer au-dessus du contenu du hero */}
+      <div className="relative z-20">
         <Header />
       </div>
 
