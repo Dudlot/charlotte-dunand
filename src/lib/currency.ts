@@ -25,7 +25,13 @@ function getReader() {
 async function countryFromIp(ip: string | null) {
   if (!ip || !maxmind.validate(ip)) return null;
   const reader = await getReader();
-  return reader?.get(ip)?.country?.iso_code ?? null;
+  try {
+    return reader?.get(ip)?.country?.iso_code ?? null;
+  } catch (error) {
+    // Une erreur de lecture ne doit jamais casser la page : on passe au repli suivant
+    console.error('[currency] Échec de la recherche GeoIP :', error);
+    return null;
+  }
 }
 
 function countryFromAcceptLanguage(value: string | null) {
