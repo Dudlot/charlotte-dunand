@@ -6,6 +6,9 @@ import FadeInLeft from '@/components/layout/FadeInLeft';
 import FadeInRight from '@/components/layout/FadeInRight';
 import OffresSection from '@/components/layout/OffresSection';
 
+import { getCurrency } from '@/lib/currency';
+import { price } from '@/lib/prices';
+
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -52,7 +55,9 @@ const faqStructuredData = {
   ]
 }
 
-export default function FondationsDigitales() {
+export default async function FondationsDigitales() {
+  const currency = await getCurrency();
+
   return (
     <main>
         <script
@@ -104,35 +109,41 @@ export default function FondationsDigitales() {
         </section>
       
 
-        <OffresSection
-        heading="Deux points de départ, une même destination"
-        intro="Que vous partiez de zéro ou que vous ayez déjà une présence digitale, l'objectif est le même : un site qui vous représente et qui travaille pour vous. Le chemin pour y arriver dépend simplement d'où vous en êtes."
-        ctaHref="/contact"
-        ctaLabel="Remplir mon brief"
-        offres={[
-            {
-            title: "Vous partez de zéro",
-            description: "Vous n'avez pas encore de site, ou ce que vous avez ne reflète plus votre activité. Qu'il s'agisse d'une vitrine, d'un blog, d'une plateforme e-commerce ou de tout autre projet digital, on construit ensemble une base pensée pour votre activité, votre cible et vos objectifs, pas pour rentrer dans un format prédéfini.",
-            features: [
-                "Stratégie et structure sur-mesure, pensées pour vos objectifs",
-                "Design entièrement personnalisé, cohérent avec votre image",
-                "Développement orienté performance, rapidité et SEO",
-                "Choix technologique adapté à votre projet, pas par habitude",
-            ],
-            price: "Des 1 200 chf",
-            },
-            {
-            title: "Vous avez déjà un site",
-            description: "Avant de reconstruire, on regarde ce qui existe. L'Audit Digital permet d'identifier ce qui doit être gardé, ajusté, ou entièrement repensé pour que chaque décision soit justifiée, jamais automatique.",
-            features: [
-                "Analyse complète de l'existant : structure, design, performance",
-                "Appel de débrief pour discuter des résultats",
-                "Rapport détaillé avec recommandations claires : ajustements ciblés ou refonte complète",
-            ],
-            price: "500 chf",
-            },
-        ]}
-        />
+       <OffresSection
+  heading="Deux points de départ, une même destination"
+  intro="Tout dépend d'où vous en êtes, pas d'un format prédéfini."
+  ctaHref="/contact"
+  ctaLabel="Pas sûr de votre point de départ ? On en parle."
+  offres={[
+    {
+      title: "Vous partez de zéro",
+      description: "Pas encore de site, ou ce que vous avez ne vous représente plus ? On construit ensemble — vitrine, blog, e-commerce ou autre — sur des bases pensées pour votre activité, votre cible et vos objectifs.",
+      featuresLabel: "Ce qu'on va construire",
+      features: [
+        "Stratégie et structure sur-mesure",
+        "Design entièrement personnalisé, cohérent avec votre image",
+        "Développement orienté performance, rapidité et SEO",
+        "Choix technologique adapté à votre projet, pas par habitude",
+      ],
+      price: `Des ${price('landing', currency)}`,
+      ctaHref: "/contact",
+      ctaLabel: "Démarrer mon projet",
+    },
+    {
+      title: "Vous avez déjà un site",
+      description: "Avant de reconstruire quoi que ce soit, on regarde ce qui existe. L'Audit Digital identifie ce qui mérite d'être gardé, ajusté ou repensé — pour que chaque décision soit justifiée.",
+      featuresLabel: "Ce qu'on va regarder",
+      features: [
+        "Analyse complète : structure, design, performance",
+        "Appel de débrief pour discuter des résultats ensemble",
+        "Rapport avec recommandations claires et plan d'action",
+      ],
+      price: price('audit', currency),
+      ctaHref: "/shop/audit-digital",
+      ctaLabel: "Réserver mon Audit",
+    },
+  ]}
+/>
 
 
         <section id='for' className='gradient-primary'>

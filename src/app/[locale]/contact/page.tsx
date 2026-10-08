@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Contact — Démarrer votre projet | Charlotte Dunand",
-  description: "Parlons de votre projet digital. Remplissez le brief initial et choisissez votre format d'échange en visio ou dans nos bureaux à Genève.",
+  description: "Parlons de votre projet digital. Remplissez le brief initial et choisissez votre format d'échange : en visio ou en personne, en Haute-Savoie ou en Suisse romande.",
 };
 
 export default function Contact() {
@@ -17,7 +17,7 @@ export default function Contact() {
                 <Header />
 
                 <h1 className='pt-36'>Parlons de votre projet</h1>
-                <p>Quelques minutes pour me parler de votre activité, vos objectifs et votre contexte. Une fois le formulaire envoyé, vous choisissez comment on se retrouve en visio ou dans nos bureaux à Genève.</p>
+                <p>Quelques minutes pour me parler de votre activité, vos objectifs et votre contexte. Une fois le formulaire envoyé, vous choisissez comment on se retrouve : en visio ou en personne, en Haute-Savoie ou en Suisse romande.</p>
             </div>
         </section>
 
@@ -30,7 +30,8 @@ export default function Contact() {
 
         <section className='bg-[var(--vin)]'>
             <div className="container mx-auto py-36 px-8 text-white text-center">
-                <h2>Pour tout autre demande</h2>
+                <h2>Pour tout autre demande</h2>                 
+                 <a href="tel:+33626185358">+33 6 26 18 53 58</a><br />
                  <a href="tel:+41783240133">+41 78 324 01 33</a><br />
               <a href="mailto:contact@charlotte-dunand.com" >contact@charlotte-dunand.com</a>
             </div>

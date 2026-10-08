@@ -6,6 +6,9 @@ import FadeInLeft from '@/components/layout/FadeInLeft';
 import FadeInRight from '@/components/layout/FadeInRight';
 import OffresSection from '@/components/layout/OffresSection';
 
+import { getCurrency } from '@/lib/currency';
+import { price } from '@/lib/prices';
+
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -52,7 +55,9 @@ const faqStructuredData = {
   ]
 }
 
-export default function IngenierieAutomatisation() {
+export default async function IngenierieAutomatisation() {
+  const currency = await getCurrency();
+
   return (
     <main>
         <script
@@ -104,32 +109,38 @@ export default function IngenierieAutomatisation() {
       
 
         <OffresSection
-        heading="Le point de départ : voir clair sur votre écosystème"
-        intro="Avant de connecter ou d'automatiser quoi que ce soit, il faut savoir ce qu'on a entre les mains. L'Audit Digital est la première étape, toujours."
-        ctaHref="/contact"
-        ctaLabel="Remplir mon brief"
-        offres={[
-            {
-            title: "Audit Digital",
-            description: "Une analyse complète de vos outils actuels, de vos process et de vos flux de données. À la fin, vous savez précisément ce qui fonctionne, ce qui freine, et ce qui peut être amélioré.",
-            features: [
-                "Analyse complète de l'existant : outils, process, flux de données",
-                "Appel de débrief pour discuter des résultats",
-                "Rapport détaillé avec recommandations claires",
-            ],
-            price: "500 chf",
-            },
-            {
-            title: "Et après l'audit ?",
-            description: "Selon les conclusions, deux types d'intervention sont possibles :",
-            features: [
-                "Setup de Base : connexions et automatisations simples (ex : formulaire connecté à votre CRM)",
-                "Workflow Complet : un processus métier entier repensé et automatisé (ex : onboarding client de A à Z)",
-            ],
-            price: "Tarifs selon l'audit",
-            },
-        ]}
-        />
+  heading="Le point de départ : voir clair sur votre écosystème"
+  intro="Avant de connecter ou d'automatiser quoi que ce soit, il faut savoir ce qu'on a entre les mains. L'Audit Digital est la première étape — toujours."
+  ctaHref="/contact"
+  ctaLabel="Pas sûr de par où commencer ? On en parle."
+  offres={[
+    {
+      title: "Audit Digital",
+      description: "Une analyse complète de vos outils actuels, de vos process et de vos flux de données. À la fin, vous savez précisément ce qui fonctionne, ce qui freine, et ce qui peut être amélioré.",
+      featuresLabel: "Ce qui est compris",
+      features: [
+        "Analyse complète de l'existant : outils, process, flux de données",
+        "Appel de débrief pour discuter des résultats",
+        "Rapport détaillé avec recommandations claires",
+      ],
+      price: price('audit', currency),
+      ctaHref: "/shop/audit-digital",
+      ctaLabel: "Réserver mon Audit",
+    },
+    {
+      title: "Et après l'audit ?",
+      description: "Selon les conclusions, deux types d'intervention sont possibles. Le périmètre et le tarif sont définis à l'issue de l'audit, sur-mesure selon vos besoins.",
+      featuresLabel: "Les deux directions possibles",
+      features: [
+        "Setup de Base — connexions et automatisations simples (ex : formulaire connecté à votre CRM)",
+        "Workflow Complet — un processus métier entier repensé et automatisé (ex : onboarding client de A à Z)",
+      ],
+      price: "Tarif défini après audit",
+      ctaHref: "/contact",
+      ctaLabel: "Démarrer par l'audit",
+    },
+  ]}
+/>
 
 
         <section id='for' className='gradient-primary'>

@@ -2,5 +2,8 @@ User-agent: *
 Allow: /
 
 Disallow: /merci
+Disallow: /audit-merci
+Disallow: /audit-recu
+Disallow: /geo-debug
 
 Sitemap: https://charlotte-dunand.com/sitemap.xml

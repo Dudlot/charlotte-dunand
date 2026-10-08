@@ -8,6 +8,7 @@ import Button from '@/components/ui/Button';
 export const metadata: Metadata = {
   title: "Merci — L'audit va démarrer | Charlotte Dunand",
   description: "Paiement confirmé, c'est parti.",
+  robots: { index: false, follow: false },
 };
 
 export default function Merci() {
