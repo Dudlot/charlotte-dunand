@@ -1,12 +1,32 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 
 export type ConsentStatus = 'accepted' | 'refused' | null;
 
 const STORAGE_KEY = 'cookie-consent';
+const CHANGE_EVENT = 'cookie-consent-changed';
 export const OPEN_SETTINGS_EVENT = 'open-cookie-settings';
+
+// Choix enregistré, lu via useSyncExternalStore (le stockage peut être indisponible en navigation privée)
+function readConsent(): ConsentStatus {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    return stored === 'accepted' || stored === 'refused' ? stored : null;
+  } catch {
+    return null;
+  }
+}
+
+function subscribe(onChange: () => void) {
+  window.addEventListener('storage', onChange);
+  window.addEventListener(CHANGE_EVENT, onChange);
+  return () => {
+    window.removeEventListener('storage', onChange);
+    window.removeEventListener(CHANGE_EVENT, onChange);
+  };
+}
 
 // Supprime les cookies Google Analytics (_ga, _ga_XXXX, _gid) sur le domaine courant et le domaine parent
 function clearAnalyticsCookies() {
@@ -21,24 +41,25 @@ function clearAnalyticsCookies() {
 }
 
 export default function CookieBanner() {
-  const [visible, setVisible] = useState(false);
+  // Côté serveur : 'pending' pour ne pas afficher le bandeau avant de connaître le choix
+  const consent = useSyncExternalStore(subscribe, readConsent, () => 'pending' as const);
+  const [settingsOpen, setSettingsOpen] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem(STORAGE_KEY) as ConsentStatus;
-    if (stored !== 'accepted' && stored !== 'refused') {
-      setVisible(true);
-    }
-
     // Lien « Gérer les cookies » du footer
-    const open = () => setVisible(true);
+    const open = () => setSettingsOpen(true);
     window.addEventListener(OPEN_SETTINGS_EVENT, open);
     return () => window.removeEventListener(OPEN_SETTINGS_EVENT, open);
   }, []);
 
   const handleChoice = (choice: 'accepted' | 'refused') => {
-    const previous = localStorage.getItem(STORAGE_KEY);
-    localStorage.setItem(STORAGE_KEY, choice);
-    setVisible(false);
+    const previous = readConsent();
+    try {
+      localStorage.setItem(STORAGE_KEY, choice);
+    } catch {
+      // Stockage indisponible : le choix vaut pour cette page uniquement
+    }
+    setSettingsOpen(false);
 
     // Retrait du consentement : GTM est déjà chargé, on nettoie et on recharge pour l'arrêter
     if (previous === 'accepted' && choice === 'refused') {
@@ -48,9 +69,10 @@ export default function CookieBanner() {
     }
 
     // Notifie le reste de l'app (pour charger GA dynamiquement sans reload)
-    window.dispatchEvent(new CustomEvent('cookie-consent-changed', { detail: choice }));
+    window.dispatchEvent(new CustomEvent(CHANGE_EVENT, { detail: choice }));
   };
 
+  const visible = settingsOpen || consent === null;
   if (!visible) return null;
 
   return (
