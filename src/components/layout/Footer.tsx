@@ -27,6 +27,7 @@ export default async function Footer() {
               <Link href='/suivi-evolution' className='block'>Suivi & évolution</Link>
               <br />
               <Link href='/vision' className='block'>À propos</Link>
+              <Link href='/journal' className='block'>Journal</Link>
               <Link href='/shop/audit-digital' className='block'>Audit digital</Link>
               <br />
               <CurrencySwitcher current={currency} />

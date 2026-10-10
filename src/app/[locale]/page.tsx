@@ -68,8 +68,8 @@ export default function Home() {
                 </div>
                 <div className="stuff-item stuff3">
                   <h3>Ressources</h3>
-                  <p>Templates, guides, références, ce que je partage quand on me pose toujours les mêmes bonnes questions.</p>
-                  <p className='font-bold italic'>Bientôt disponible</p>
+                  <p>Méthodes, retours d&apos;expérience et réflexions : ce que je partage quand on me pose toujours les mêmes bonnes questions.</p>
+                  <Link href='/journal'>Lire le Journal</Link>
                 </div>
               </div>
             </FadeInRight>

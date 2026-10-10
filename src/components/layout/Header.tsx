@@ -30,6 +30,7 @@ export default function Header() {
             <ul className="flex gap-8 list-none">
               <NavLinkDropdown label="Services" subLinks={servicesLinks} />
               <NavLink href="/vision">Vision</NavLink>
+              <NavLink href="/journal">Journal</NavLink>
               <NavLink href="/contact">Contact</NavLink>
             </ul>
           </nav>
@@ -73,6 +74,7 @@ export default function Header() {
         <ul className="flex flex-col gap-8 list-none text-center text-2xl text-white">
           <MobileNavAccordion label="Services" subLinks={servicesLinks} onLinkClick={() => setIsOpen(false)} />
           <NavLink href="/vision" onClick={() => setIsOpen(false)}>Vision</NavLink>
+          <NavLink href="/journal" onClick={() => setIsOpen(false)}>Journal</NavLink>
           <NavLink href="/contact" onClick={() => setIsOpen(false)}>Contact</NavLink>
         </ul>
       </div>
