@@ -7,6 +7,8 @@ import { routing } from "@/i18n/routing";
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  // Identifiant référencé par les autres données structurées (ex. Service de la page /agences)
+  "@id": "https://charlotte-dunand.com/#charlotte-dunand",
   "name": "Charlotte Dunand",
   "description": "Architecte Digitale indépendante. Sites web, automatisations et systèmes sur-mesure pour les entreprises qui veulent grandir sans s'épuiser.",
   "url": "https://charlotte-dunand.com",

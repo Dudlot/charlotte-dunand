@@ -23,7 +23,7 @@ export default function CurrencySwitcher({ current }: { current: Currency }) {
             onClick={() => startTransition(() => setCurrency(option.value))}
             disabled={isPending || option.value === current}
             aria-pressed={option.value === current}
-            className={option.value === current ? 'font-semibold' : 'underline cursor-pointer'}
+            className={`py-1 min-w-6 ${option.value === current ? 'font-semibold' : 'underline cursor-pointer'}`}
           >
             {option.label}
           </button>
