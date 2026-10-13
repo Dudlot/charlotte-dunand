@@ -41,6 +41,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: "https://charlotte-dunand.com/agences",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: "https://charlotte-dunand.com/journal",
       lastModified: new Date(),
       changeFrequency: "weekly",

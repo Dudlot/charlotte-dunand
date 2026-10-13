@@ -13,4 +13,6 @@ export const calloveya = localFont({
   src: './Calloveya.woff2',
   variable: '--font-calloveya',
   display: 'swap',
+  // Police d'accent, jamais dans le haut de page : pas de préchargement, pour laisser la priorité à Alphazet
+  preload: false,
 });

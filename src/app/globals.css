@@ -413,6 +413,555 @@ gap: 1.25rem;
   color: var(--froid);
 }
 
+/**** ---- Agences ---- ****/
+.agences-hero-title {
+  font-size: 3.75rem;
+  line-height: 1.02;
+}
+
+.agences-hero-lead {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding-top: 2rem;
+  max-width: 34rem;
+}
+
+/* Chaque phrase sur sa ligne, annotée d'un trait vertical (façade puis structure) */
+.agences-marked {
+  position: relative;
+  display: block;
+  padding-left: 1.25rem;
+}
+
+.agences-marked + .agences-marked {
+  margin-top: 0.5rem;
+}
+
+.agences-mark {
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  bottom: 0.2em;
+  width: 3px;
+  border-radius: 2px;
+  background-color: #fff;
+  transform-origin: top center;
+}
+
+.agences-h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.agences-text,
+.agences-text p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.agences-text-large {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Hero : façade et plan */
+.agences-blueprint {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+}
+
+.agences-cote {
+  position: absolute;
+  top: 4%;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.agences-cote::before,
+.agences-cote::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  width: 1px;
+  height: 11px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.agences-cote::before { left: 0; }
+.agences-cote::after { right: 0; }
+
+.agences-brick {
+  border: 1px dashed rgba(255, 255, 255, 0.7);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.5rem 0.75rem;
+}
+
+.agences-brick span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.agences-chrome {
+  display: flex;
+  gap: 6px;
+  padding: 3.5% 6% 0;
+}
+
+.agences-chrome i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--froid);
+}
+
+.agences-slice {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 30px rgba(58, 31, 30, 0.18);
+  overflow: hidden;
+}
+
+.agences-slice b {
+  display: block;
+}
+
+/* Problème : tickets */
+.agences-ticket {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid var(--froid);
+  border-radius: 1.25rem;
+  padding: 1.5rem 1.75rem 1.5rem 2rem;
+  box-shadow: 0 12px 30px rgba(58, 31, 30, 0.08);
+  overflow: hidden;
+}
+
+.agences-ticket p {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.agences-ticket .agences-ticket-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cerise);
+  padding-bottom: 0.5rem;
+}
+
+.agences-ticket-done {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--cerise);
+  transform-origin: top center;
+}
+
+.agences-resolution {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--cerise);
+}
+
+.agences-check {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  fill: none;
+  stroke: var(--cerise);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Briques : étages */
+.agences-floor {
+  position: relative;
+}
+
+.agences-floor-slab {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 1.25rem;
+  transform: translate(10px, 10px);
+}
+
+.agences-floor-card {
+  position: relative;
+  border: 1px solid #fff;
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  background-color: var(--vin);
+  transition: translate 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.agences-floor:hover .agences-floor-card {
+  translate: -8px -8px;
+}
+
+.agences-floor-card p {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.agences-floor-card .agences-floor-number {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+}
+
+.agences-floor-title {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  padding-bottom: 1rem;
+}
+
+.agences-floor-upcoming .agences-floor-card {
+  border-style: dashed;
+}
+
+.agences-floor-upcoming .agences-floor-slab {
+  border-style: dashed;
+}
+
+.agences-modules {
+  display: flex;
+  gap: 0.75rem;
+  padding-top: 2rem;
+}
+
+.agences-module-slot {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px dashed rgba(255, 255, 255, 0.6);
+  border-radius: 0.5rem;
+}
+
+.agences-module {
+  position: absolute;
+  inset: 4px;
+  border-radius: 0.375rem;
+  background-color: var(--cerise);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Méthode : démonstration marque blanche */
+.agences-demo-site {
+  border: 1px solid var(--froid);
+  border-radius: 1.25rem;
+  background-color: #fff;
+  box-shadow: 0 20px 50px rgba(58, 31, 30, 0.12);
+  overflow: hidden;
+}
+
+.agences-chrome-light {
+  padding: 1rem 1.25rem 0;
+}
+
+.agences-demo-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.agences-demo-brand {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.agences-demo-nav b {
+  display: block;
+  width: 2rem;
+  height: 0.4rem;
+  border-radius: 2px;
+  background-color: var(--froid);
+}
+
+.agences-demo-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+.agences-demo-body b {
+  display: block;
+  height: 0.9rem;
+  border-radius: 3px;
+  background-color: var(--vin);
+}
+
+.agences-demo-body .agences-demo-muted {
+  height: 0.5rem;
+  background-color: var(--froid);
+}
+
+.agences-demo-button {
+  margin-top: 0.75rem;
+  width: 7rem;
+  height: 1.75rem;
+  border-radius: 999px;
+  background-color: var(--cerise);
+}
+
+.agences-demo-footer {
+  background-color: var(--vin);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+.agences-demo-signature {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.agences-demo-signature.is-agency {
+  color: #fff;
+  background-color: var(--cerise);
+  border-radius: 0.25rem;
+  padding: 0 0.3rem;
+}
+
+.agences-demo-caret {
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: -0.15em;
+  background-color: currentColor;
+  animation: agences-caret 1s steps(1) infinite;
+}
+
+@keyframes agences-caret {
+  50% { opacity: 0; }
+}
+
+.agences-switch-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #5a4a49;
+}
+
+.agences-switch-row .is-active {
+  color: var(--vin);
+  font-weight: 600;
+}
+
+.agences-switch {
+  position: relative;
+  width: 3.25rem;
+  height: 1.75rem;
+  border-radius: 999px;
+  background-color: var(--vin);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.agences-switch[aria-pressed="true"] {
+  background-color: var(--cerise);
+}
+
+.agences-switch:focus-visible {
+  outline: 2px solid var(--cerise);
+  outline-offset: 3px;
+}
+
+.agences-switch-knob {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.agences-switch[aria-pressed="true"] .agences-switch-knob {
+  transform: translateX(1.5rem);
+}
+
+/* Méthode : tracé des étapes */
+.agences-method {
+  position: relative;
+  margin-top: 4rem;
+}
+
+.agences-method svg {
+  fill: none;
+  stroke: var(--cerise);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.agences-method svg path {
+  vector-effect: non-scaling-stroke;
+}
+
+.agences-method .agences-method-guide {
+  stroke: var(--froid);
+}
+
+.agences-method-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 24px;
+}
+
+.agences-method-line-v {
+  position: absolute;
+  top: 12px;
+  bottom: 2.25rem;
+  left: 0;
+  width: 24px;
+}
+
+.agences-method-steps {
+  display: grid;
+  gap: 2.25rem;
+  padding-left: 3rem;
+}
+
+.agences-method-step {
+  position: relative;
+}
+
+.agences-method-node {
+  position: absolute;
+  left: -3rem;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--cerise);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agences-method-node span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--cerise);
+}
+
+.agences-method-label {
+  font-weight: 600;
+  font-size: 1.0625rem;
+  line-height: 24px;
+}
+
+@media (min-width: 768px) {
+  .agences-method-steps {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    padding-left: 0;
+  }
+
+  .agences-method-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2.25rem;
+    text-align: center;
+  }
+
+  .agences-method-node {
+    left: 50%;
+    margin-left: -12px;
+  }
+}
+
+/* Architecte : croquis vers plan */
+.agences-sketch {
+  max-width: 22rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.agences-sketch svg {
+  width: 100%;
+  height: auto;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.agences-sketch-hand {
+  stroke: var(--vin);
+  stroke-width: 1.2;
+}
+
+.agences-sketch-plan {
+  stroke: var(--cerise);
+  stroke-width: 1.5;
+}
+
+/* Conclusion : la grille du plan en filigrane */
+.agences-final {
+  position: relative;
+  overflow: hidden;
+}
+
+.agences-final::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 0%, transparent 70%);
+  mask-image: radial-gradient(ellipse at center, #000 0%, transparent 70%);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .agences-demo-caret {
+    animation: none;
+  }
+
+  .agences-floor-card,
+  .agences-switch-knob {
+    transition: none;
+  }
+}
+
 /**** ---- Responsive ---- ****/
 @media (max-width: 500px) { 
   h1, .h1 {
@@ -458,6 +1007,36 @@ gap: 1.25rem;
   }
   .journal-cta {
     padding: 1.5rem;
+  }
+  .agences-hero-title {
+    font-size: 2.25rem;
+  }
+  .agences-hero-lead {
+    font-size: 1.2rem;
+  }
+  .agences-h2 {
+    font-size: 2rem;
+  }
+  .agences-text,
+  .agences-text p,
+  .agences-floor-card p,
+  .agences-ticket p {
+    font-size: 1rem;
+  }
+  .agences-text-large {
+    font-size: 1.2rem;
+  }
+  .agences-resolution {
+    font-size: 1.2rem;
+  }
+  .agences-floor-card {
+    padding: 1.75rem;
+  }
+  .agences-floor-card .agences-floor-number {
+    font-size: 2.75rem;
+  }
+  .agences-floor-title {
+    font-size: 1.35rem;
   }
   .h4.price {
     font-size: 1.75rem;

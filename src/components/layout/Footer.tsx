@@ -16,33 +16,34 @@ export default async function Footer() {
               {/* <p>Chem. du Pavillon 2,</p>
               <p className="mb-5">1218 Le Grand-Saconnex, Suisse</p> */}
               <p className="mb-5">Haute-Savoie & Suisse romande</p>
-              <a href="tel:+33626185358">+33 6 26 18 53 58</a><br />
-              <a href="tel:+41783240133">+41 78 324 01 33</a><br />
-              <a href="mailto:contact@charlotte-dunand.com" >contact@charlotte-dunand.com</a>
+              <a href="tel:+33626185358" className='inline-block py-1'>+33 6 26 18 53 58</a><br />
+              <a href="tel:+41783240133" className='inline-block py-1'>+41 78 324 01 33</a><br />
+              <a href="mailto:contact@charlotte-dunand.com" className='inline-block py-1'>contact@charlotte-dunand.com</a>
             </div>
             <div className='flex-1'>
               <p className='font-semibold'>Navigation</p>
-              <Link href='/fondations-digitales' className='block'>Fondations digitales</Link>
-              <Link href='/ingenierie-automatisation' className='block'>Ingénierie & Automatisation</Link>
-              <Link href='/suivi-evolution' className='block'>Suivi & évolution</Link>
+              <Link href='/fondations-digitales' className='block py-1'>Fondations digitales</Link>
+              <Link href='/ingenierie-automatisation' className='block py-1'>Ingénierie & Automatisation</Link>
+              <Link href='/suivi-evolution' className='block py-1'>Suivi & évolution</Link>
               <br />
-              <Link href='/vision' className='block'>À propos</Link>
-              <Link href='/journal' className='block'>Journal</Link>
-              <Link href='/shop/audit-digital' className='block'>Audit digital</Link>
+              <Link href='/vision' className='block py-1'>À propos</Link>
+              <Link href='/journal' className='block py-1'>Journal</Link>
+              <Link href='/shop/audit-digital' className='block py-1'>Audit digital</Link>
+              <Link href='/agences' className='block py-1'>Vous êtes une agence ?</Link>
               <br />
               <CurrencySwitcher current={currency} />
 
             </div>
             <div className='flex-1 text-left sm:text-right'>
               <p className='font-semibold'>Réseaux</p>
-              <Link href={'https://www.linkedin.com/in/cdunand/'} target='_blank' rel='noopener noreferrer' className='block'>Linkedin</Link>
-              <Link href={'https://www.instagram.com/charlotte_dunand/'} target='_blank' rel='noopener noreferrer' className='block'>Instagram</Link>
-              <Link href={'https://www.tiktok.com/@charlottepastelles'} target='_blank' rel='noopener noreferrer' className='block'>Tiktok</Link>
+              <Link href={'https://www.linkedin.com/in/cdunand/'} target='_blank' rel='noopener noreferrer' className='block py-1'>Linkedin</Link>
+              <Link href={'https://www.instagram.com/charlotte_dunand/'} target='_blank' rel='noopener noreferrer' className='block py-1'>Instagram</Link>
+              <Link href={'https://www.tiktok.com/@charlottepastelles'} target='_blank' rel='noopener noreferrer' className='block py-1'>Tiktok</Link>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end text-xs">
               <Image src="/logo-cerise.svg" alt="Logo" width={506} height={139} className="mt-5" />
-              <p className='text-left sm:text-right mt-1'><Link href={'/legales/mentions-politiques'}>Mentions légales - Politique de confidentialité</Link> - <Link href={'/legales/cgv'}>CGV</Link> - <CookieSettingsLink /> <br />
+              <p className='text-left sm:text-right mt-1'><Link href={'/legales/mentions-politiques'} className='inline-block py-1'>Mentions légales - Politique de confidentialité</Link> - <Link href={'/legales/cgv'} className='inline-block py-1'>CGV</Link> - <CookieSettingsLink /> <br />
               2026 Charlotte Dunand. Tous droits réservés.</p>
           </div>
         </div>

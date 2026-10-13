@@ -7,7 +7,7 @@ export default function CookieSettingsLink() {
     <button
       type="button"
       onClick={() => window.dispatchEvent(new Event(OPEN_SETTINGS_EVENT))}
-      className="cursor-pointer"
+      className="cursor-pointer inline-block py-1"
     >
       Gérer les cookies
     </button>
