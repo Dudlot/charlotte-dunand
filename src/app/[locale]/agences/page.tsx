@@ -15,8 +15,8 @@ const TITLE = 'Partenaire technique pour agences | Charlotte Dunand';
 const DESCRIPTION =
   'Développement et maintenance de sites en marque blanche pour les agences. Vous gardez le client et la marge, je prends la technique.';
 
-// Les demandes arrivent étiquetées « agence » dans Tally (champ caché source), puis dans Notion
-const CTA_HREF = '/contact?source=agence';
+// Prise de rendez-vous Zcal dédiée aux agences (nouvel onglet)
+const CTA_HREF = 'https://zcal.co/charlottedunand/agences';
 
 export const metadata: Metadata = {
   title: TITLE,
