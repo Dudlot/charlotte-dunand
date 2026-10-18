@@ -6,10 +6,10 @@ excerpt: "Automatiser son entreprise commence rarement par un outil. Voici par o
 image: "/journal/automatiser-son-entreprise-par-ou-commencer/une.webp"
 thumbnail: "/journal/automatiser-son-entreprise-par-ou-commencer/grille.webp"
 credit:
-  author: "Microsoft Copilot"
-  authorUrl: "https://unsplash.com/fr/@microsoftcopilot?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+  author: "Kari Shea"
+  authorUrl: "https://unsplash.com/fr/@karishea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
   source: "Unsplash"
-  sourceUrl: "https://unsplash.com/fr/photos/personne-tenant-un-telephone-pres-dun-ordinateur-portable-et-dune-tablette-sur-le-bureau-7R3PqLcVnzQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+  sourceUrl: "https://unsplash.com/fr/photos/macbook-pro-sur-le-dessus-dune-table-marron-1SAnrIxw5OY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
 lang: "fr"
 ---
 
