@@ -1,6 +1,7 @@
 import { alphazet, calloveya } from '@/fonts';
 import CookieBanner from '@/components/CookieBanner';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import Matomo from '@/components/Matomo';
 import "./globals.css";
 import type { Metadata } from 'next';
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         {children}
         <CookieBanner />
         <GoogleAnalytics />
+        <Matomo />
       </body>
     </html>
   );

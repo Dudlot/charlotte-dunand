@@ -74,6 +74,7 @@ export default function MentionsPolitiques() {
                     <li>Zcal (États-Unis) — prise de rendez-vous</li>
                     <li>Stripe (Irlande / États-Unis) — traitement des paiements</li>
                     <li>Google Analytics, Google Tag Manager et Google Search Console (États-Unis) — mesure d&apos;audience et performance du site</li>
+                    <li>Matomo (auto-hébergé sur matomo.charlotte-dunand.com) — mesure d&apos;audience, données conservées sur mon propre serveur et jamais partagées</li>
                 </ul>
                 <p className='pt-4'>Certains de ces prestataires sont situés hors de Suisse et de l&apos;Union européenne. Ces transferts sont encadrés par les garanties prévues par la loi : décisions d&apos;adéquation (notamment le Data Privacy Framework UE–États-Unis et Suisse–États-Unis) ou clauses contractuelles types. Chacun de ces outils traite les données conformément à sa propre politique de confidentialité.</p>
 
@@ -82,7 +83,7 @@ export default function MentionsPolitiques() {
                 <ul className='custom-list'>
                     <li><span className='font-semibold'>Votre choix de cookies</span> (stockage local, nécessaire) : retient si vous avez accepté ou refusé la mesure d&apos;audience</li>
                     <li><span className='font-semibold'>Votre devise</span> (cookie « currency », 1 an) : retient la devise choisie pour l&apos;affichage des prix (CHF ou €)</li>
-                    <li><span className='font-semibold'>Mesure d&apos;audience</span> (cookies Google Analytics « _ga », 13 mois maximum) : déposés uniquement si vous les acceptez</li>
+                    <li><span className='font-semibold'>Mesure d&apos;audience</span> (cookies Google Analytics « _ga » et Matomo « _pk_id », « _pk_ses », 13 mois maximum) : déposés uniquement si vous les acceptez</li>
                 </ul>
                 <p className='pt-4'>Pour afficher les prix dans la bonne devise, le pays du visiteur est déduit de son adresse IP, directement sur le serveur du site : l&apos;adresse IP n&apos;est ni conservée, ni transmise à un tiers. <a href='https://db-ip.com' target='_blank' rel='noopener noreferrer' className='underline'>IP Geolocation by DB-IP</a>.</p>
                 <p className='pt-4'>Lors de votre première visite, un bandeau vous permet d&apos;accepter ou de refuser les cookies de mesure d&apos;audience. Vous pouvez modifier votre choix à tout moment grâce au lien « Gérer les cookies » en bas de chaque page.</p>

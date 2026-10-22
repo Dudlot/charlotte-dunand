@@ -28,12 +28,12 @@ function subscribe(onChange: () => void) {
   };
 }
 
-// Supprime les cookies Google Analytics (_ga, _ga_XXXX, _gid) sur le domaine courant et le domaine parent
+// Supprime les cookies Google Analytics (_ga, _ga_XXXX, _gid) et Matomo (_pk_id, _pk_ses…) sur le domaine courant et le domaine parent
 function clearAnalyticsCookies() {
   const domain = window.location.hostname.replace(/^www\./, '');
   document.cookie.split(';').forEach((c) => {
     const name = c.split('=')[0].trim();
-    if (/^(_ga|_gid|_gat)/.test(name)) {
+    if (/^(_ga|_gid|_gat|_pk_|mtm_)/.test(name)) {
       document.cookie = `${name}=; max-age=0; path=/`;
       document.cookie = `${name}=; max-age=0; path=/; domain=.${domain}`;
     }
@@ -61,7 +61,7 @@ export default function CookieBanner() {
     }
     setSettingsOpen(false);
 
-    // Retrait du consentement : GTM est déjà chargé, on nettoie et on recharge pour l'arrêter
+    // Retrait du consentement : GTM et Matomo sont déjà chargés, on nettoie et on recharge pour l'arrêter
     if (previous === 'accepted' && choice === 'refused') {
       clearAnalyticsCookies();
       window.location.reload();
