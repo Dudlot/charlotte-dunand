@@ -2,6 +2,7 @@
 
 import { Suspense } from 'react';
 import Script from 'next/script';
+import TallyRefreshNote from './TallyRefreshNote';
 import { useSearchParams } from 'next/navigation';
 
 // Sources acceptées dans l'URL (?source=…), transmises au champ caché « source » de Tally
@@ -25,6 +26,7 @@ function TallyFormWithSource() {
 function TallyEmbed({ sourceParam }: { sourceParam: string }) {
   return (
     <>
+      <TallyRefreshNote />
       <iframe
         data-tally-src={`https://tally.so/embed/ODV80R?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1${sourceParam}`}
         loading="lazy"

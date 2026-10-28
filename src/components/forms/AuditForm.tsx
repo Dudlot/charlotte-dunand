@@ -1,11 +1,13 @@
 'use client';
 
 import Script from 'next/script';
+import TallyRefreshNote from './TallyRefreshNote';
 import type { Currency } from '@/lib/prices';
 
 export default function AuditForm({ currency }: { currency: Currency }) {
   return (
     <>
+      <TallyRefreshNote />
       <iframe
         data-tally-src={`https://tally.so/embed/eqo9Ol?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&currency=${currency}`}
         loading="lazy"

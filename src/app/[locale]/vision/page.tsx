@@ -132,21 +132,6 @@ export default function Vision() {
         </section>
 
 
-        <div id="geneve">
-            <div className="flex flex-col sm:flex-row">
-                <div className="flex-1 py-36 px-8">
-                    <h3 className="mb-4">Un pied en Haute-Savoie, une portée plus large</h3>
-                    <p className="text-xs">Basée en Haute-Savoie, avec une activité qui s&apos;étend à la Suisse romande et bien au-delà. Le travail se fait principalement à distance, les échanges en personne se planifient au cas par cas, selon les disponibilités.</p>
-                </div>
-                <div className="flex-1 gradient-primary text-white flex flex-col justify-center gap-6 py-24 px-8">
-                    <p className="h3">Haute-Savoie</p>
-                    <p className="h3">Suisse romande</p>
-                    <p className="h3">À distance, partout ailleurs</p>
-                </div>
-            </div>
-        </div>
-
-
         <section id='for' className='gradient-primary'>
             <div className="container mx-auto py-36 px-8 text-center text-white">
                 <FadeInStagger staggerDelay={0.15}>
