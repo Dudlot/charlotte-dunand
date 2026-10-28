@@ -15,6 +15,34 @@ export const metadata: Metadata = {
   description: "Graphiste de formation, passée par le code, l'entrepreneuriat et l'IA : découvrez le parcours et la philosophie derrière Charlotte Dunand, Architecte Digitale entre la Haute-Savoie et la Suisse romande.",
 };
 
+const avis = [
+  {
+    name: "Magalie",
+    domain: "Coach personnel",
+    text: "Merci beaucoup à Charlotte, de Dude, pour son accompagnement professionnel et personnalisé. Je la trouve à l'écoute, disponible, elle a su s'adapter à mes besoins et mes contraintes. Elle est pleine d'idées, fait de belles propositions. Aujourd'hui, grâce à elle, je suis plus régulière, je ne me mets plus la pression lorsque je communique sur les réseaux. Je la recommande vivement, son expertise est incroyable !",
+  },
+  {
+    name: "Delphine",
+    domain: "Coach bien-être",
+    text: "Merci beaucoup Charlotte pour tous tes conseils et l'aide que tu m'as apportée lors de l'accompagnement. Tu as toujours réussi à adapter le programme de notre appel pour répondre à mes questions et m'aider à passer à l'action sur les tâches qui me posaient soucis. Merci beaucoup",
+  },
+  {
+    name: "Céline",
+    domain: "Cabinet d'architecture",
+    text: "Charlotte est une jeune entreprise pleine de ressources, d'idées novatrices, à l'écoute du client et très professionnelle ! Notre bureau d'architecte est ravi de collaborer avec eux depuis le début et nous ne pouvons que recommander leurs services.",
+  },
+  {
+    name: "Miguel",
+    domain: "Agence de communication",
+    text: "Nous avons travaillé à plusieurs reprises avec Charlotte, et chaque projet s'est déroulé de la meilleure manière possible. Charlotte est professionnelle, réactive et toujours à l'écoute de nos besoins. Nous sommes extrêmement satisfaits des résultats obtenus et recommandons vivement ses services.",
+  },
+  {
+    name: "Fiona",
+    domain: "Diététicienne sophrologue",
+    text: "UN GRAND MERCI ! Le professionnalisme dont Charlotte a fait preuve tout au long du projet est admirable. Elle a su respecter les délais, être à l'écoute de mes besoins et m'apporter des solutions innovantes à chaque étape. La qualité de son travail est indéniable, et son souci du détail a permis de créer un site internet non seulement esthétique mais aussi fonctionnel et intuitif. Le résultat des flyers et de mes cartes de visite est également plus que satisfaisant !!! je suis tout simplement ravie ! Je recommande vivement Charlotte à toute personne cherchant une graphiste talentueuse et dévouée. Merci encore pour ce travail de pro et tes conseils précieux !",
+  },
+];
+
 export default function Vision() {
   return (
     <main>
@@ -102,12 +130,31 @@ export default function Vision() {
         </div>
 
 
+        <section id='avis'>
+            <div className="container mx-auto py-36 px-8">
+                <h2 className='mb-12'>Ils en parlent mieux que moi</h2>
+                <div className="columns-1 md:columns-2 gap-12">
+                    <FadeInStagger staggerDelay={0.15}>
+                        {avis.map((item) => (
+                            <figure key={item.name} className='break-inside-avoid mb-12'>
+                                <blockquote>
+                                    <p>« {item.text} »</p>
+                                </blockquote>
+                                <figcaption className='pt-4 text-xs text-[var(--cerise)]'>{item.name}, {item.domain}</figcaption>
+                            </figure>
+                        ))}
+                    </FadeInStagger>
+                </div>
+            </div>
+        </section>
+
+
         <section id='for' className='gradient-primary'>
             <div className="container mx-auto py-36 px-8 text-center text-white">
                 <FadeInStagger staggerDelay={0.15}>
                     <h2>Envie de construire quelque chose ensemble ?</h2>
                     <p className='py-8'>Maintenant que vous savez qui se cache derrière l&apos;écran, parlons de votre projet.</p>
-                    <Button href='/contact'>Remplir mon brief</Button>
+                    <Button href='/reserver-appel'>Remplir mon brief</Button>
                 </FadeInStagger>
             </div>
         </section>

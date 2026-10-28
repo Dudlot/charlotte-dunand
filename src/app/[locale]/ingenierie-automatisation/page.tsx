@@ -70,7 +70,7 @@ export default async function IngenierieAutomatisation() {
 
                 <h1 className='h5 pt-36'>Ingénierie & Automatisations</h1>
                 <h2 className='h1'>Plus vous grandissez, plus vos outils se multiplient. À un moment, c&apos;est vous qui devenez la pièce manquante entre eux.</h2>
-                <Button href="/contact">Remplir mon brief</Button>
+                <Button href="/reserver-appel">Remplir mon brief</Button>
             </div>
         </section>
 
@@ -111,7 +111,7 @@ export default async function IngenierieAutomatisation() {
         <OffresSection
   heading="Le point de départ : voir clair sur votre écosystème"
   intro="Avant de connecter ou d'automatiser quoi que ce soit, il faut savoir ce qu'on a entre les mains. L'Audit Digital est la première étape — toujours."
-  ctaHref="/contact"
+  ctaHref="/reserver-appel"
   ctaLabel="Pas sûr de par où commencer ? On en parle."
   offres={[
     {
@@ -137,7 +137,7 @@ export default async function IngenierieAutomatisation() {
       ],
       // Prix affiché en police manuscrite (Calloveya) : pas d'accents
       price: "Tarif defini apres audit",
-      ctaHref: "/contact",
+      ctaHref: "/reserver-appel",
       ctaLabel: "Démarrer par l'audit",
     },
   ]}

@@ -83,7 +83,7 @@ export default function Home() {
             <div className='flex-1'>
               <p>Remplissez votre brief en quelques minutes, on se retrouve ensuite pour un premier échange, en visio ou en personne, en Haute-Savoie ou en Suisse romande.</p>
               <h2>Prenons un café.</h2>
-              <Button href="/contact">Remplir mon brief</Button>
+              <Button href="/reserver-appel">Remplir mon brief</Button>
             </div>
             <Faq className='flex-2'/>
           </div>

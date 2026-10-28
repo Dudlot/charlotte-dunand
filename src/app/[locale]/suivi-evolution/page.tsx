@@ -111,7 +111,7 @@ export default async function SuiviEvolution() {
         <OffresSection
         heading="On grandit avec vous"
         intro="Le suivi de votre écosystème n'est pas figé, il évolue avec vos besoins. Voici comment ça se structure, du socle indispensable à l'accompagnement growth."
-        ctaHref="/contact"
+        ctaHref="/reserver-appel"
         ctaLabel="Remplir mon brief"
         offres={[
            {
@@ -127,7 +127,7 @@ export default async function SuiviEvolution() {
     "Rapport mensuel : un email ou PDF généré automatiquement avec le résumé de l'activité",
   ],
   price: `Des ${price('securite', currency)}`,
-  ctaHref: "/contact",
+  ctaHref: "/reserver-appel",
   ctaLabel: "Démarrer avec la base",
 },
 {
@@ -143,7 +143,7 @@ export default async function SuiviEvolution() {
     "Vidéo Loom trimestrielle : 5 minutes pour résumer vos chiffres et mes recommandations",
   ],
   price: `Des ${price('data', currency)}`,
-  ctaHref: "/contact",
+  ctaHref: "/reserver-appel",
   ctaLabel: "En savoir plus",
 },
 {
@@ -156,7 +156,7 @@ export default async function SuiviEvolution() {
     "Mise en œuvre prioritaire, sans nouveau brief à chaque demande",
   ],
   price: "Sur mesure, discutons ensemble",
-  ctaHref: "/contact",
+  ctaHref: "/reserver-appel",
   ctaLabel: "Discutons de votre projet",
 },
         ]}

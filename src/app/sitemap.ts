@@ -60,6 +60,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: "https://charlotte-dunand.com/reserver-appel",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: "https://charlotte-dunand.com/shop/audit-digital",
       lastModified: new Date(),
       changeFrequency: "monthly",

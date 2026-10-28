@@ -45,7 +45,7 @@ export default function Hero() {
             Sites web, automatisations, design : tout ce qu&apos;il faut pour que votre entreprise tourne sans vous épuiser.
           </p>
           <h1>Vos systèmes travaillent, <span className="text-[var(--cerise)]">vous respirez</span></h1>
-          <Button href="/contact">Remplir mon brief</Button>
+          <Button href="/reserver-appel">Remplir mon brief</Button>
         </motion.div>
       </div>
     </motion.div>
