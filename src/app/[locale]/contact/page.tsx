@@ -14,18 +14,18 @@ export const metadata: Metadata = {
 
 const benefits = [
   "Votre site travaille pour vous, même quand vous dormez.",
-  "Vos outils se parlent — vous n'intervenez plus entre eux.",
+  "Vos outils se parlent, vous n'intervenez plus entre eux.",
   "Votre écosystème évolue avec vous, sans tout reconstruire.",
 ];
 
 const realisations = [
   {
     title: "Plugin de traduction multilingue sur mesure",
-    text: "Un site de plusieurs centaines de pages, traduit en masse grâce à une intégration Claude directement dans WordPress. Une traduction cohérente, contrôlable, sans abonnement SaaS à prix prohibitif — et sans perdre la main sur le contenu.",
+    text: "Un site de plusieurs centaines de pages, traduit en masse grâce à une intégration Claude directement dans WordPress. Une traduction cohérente, contrôlable, sans abonnement SaaS à prix prohibitif et sans perdre la main sur le contenu.",
   },
   {
     title: "Système de réservation pour un restaurant genevois",
-    text: "Zéro abonnement mensuel, zéro dépendance à une plateforme tierce. Un système taillé pour les contraintes réelles du restaurant — fiable, simple à gérer, propriété totale du client.",
+    text: "Zéro abonnement mensuel, zéro dépendance à une plateforme tierce. Un système taillé pour les contraintes réelles du restaurant, fiable, simple à gérer, propriété totale du client.",
   },
   {
     title: "Plateforme événementielle avec validation automatique",
@@ -43,7 +43,7 @@ export default function Contact() {
                 <p className='pt-36 pb-6 text-xs uppercase tracking-widest'>Vous venez de scanner mon QR code.</p>
                 <h1>Ici, rien n&apos;a été fait en 30 secondes.</h1>
                 <p className='h5 pt-8 pb-4'>Et ça se voit en 3.</p>
-                <p>L&apos;IA, je l&apos;utilise : comme un outil, pas comme un raccourci. Sites web, automatisations, systèmes sur mesure — je construis l&apos;écosystème digital qui fait tourner votre entreprise sans vous épuiser.</p>
+                <p>L&apos;IA, je l&apos;utilise : comme un outil, pas comme un raccourci. Sites web, automatisations, systèmes sur mesure : je construis l&apos;écosystème digital qui fait tourner votre entreprise sans vous épuiser.</p>
             </div>
         </section>
 
