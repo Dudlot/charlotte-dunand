@@ -1,6 +1,9 @@
 import { MetadataRoute } from "next";
 import { getArticles } from "@/lib/journal";
 
+// Recalculé à chaque requête : les articles programmés y apparaissent le jour de leur parution, sans nouveau build
+export const dynamic = "force-dynamic";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const articles: MetadataRoute.Sitemap = getArticles().map(({ slug, frontmatter }) => ({
     url: `https://charlotte-dunand.com/journal/${slug}`,

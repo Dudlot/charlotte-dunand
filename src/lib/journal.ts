@@ -36,8 +36,17 @@ const JOURNAL_DIR = path.join(process.cwd(), 'content/journal');
 const PUBLIC_DIR = path.join(process.cwd(), 'public');
 const FAQ_HEADING = /^## Questions fréquentes\s*$/m;
 
-// Les brouillons (draft: true) ne sont visibles qu'en local
+// Les brouillons (draft: true) et les articles programmés (date future) ne sont visibles qu'en local
 const showDrafts = process.env.NODE_ENV !== 'production' || process.env.JOURNAL_SHOW_DRAFTS === '1';
+
+// Date du jour à Paris (AAAA-MM-JJ) : un article daté du 12 novembre paraît le 12 novembre à 0 h, heure française
+function today() {
+  return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris' }).format(new Date());
+}
+
+function isVisible(frontmatter: ArticleFrontmatter) {
+  return showDrafts || (!frontmatter.draft && frontmatter.date <= today());
+}
 
 function readingTime(content: string) {
   const words = content.split(/\s+/).filter(Boolean).length;
@@ -58,7 +67,7 @@ function listArticleFiles() {
 export function getArticles(): Article[] {
   return listArticleFiles()
     .map(readArticleFile)
-    .filter(({ frontmatter }) => showDrafts || !frontmatter.draft)
+    .filter(({ frontmatter }) => isVisible(frontmatter))
     .map(({ slug, frontmatter, content }) => ({ slug, frontmatter, readingTime: readingTime(content) }))
     .sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
 }
@@ -101,7 +110,7 @@ export function getArticle(slug: string): ArticleWithContent | null {
   if (!filename) return null;
 
   const { frontmatter, content } = readArticleFile(filename);
-  if (frontmatter.draft && !showDrafts) return null;
+  if (!isVisible(frontmatter)) return null;
 
   return { slug, frontmatter, readingTime: readingTime(content), ...splitContent(content) };
 }
