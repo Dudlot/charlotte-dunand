@@ -3,6 +3,7 @@ import Header from '@/components/layout/Header';
 import Button from '@/components/ui/Button';
 import FadeInStagger from '@/components/layout/FadeInStagger';
 import FadeInRight from '@/components/layout/FadeInRight';
+import ServicesPlan from '@/components/contact/ServicesPlan';
 
 import type { Metadata } from 'next';
 
@@ -39,15 +40,27 @@ export default function Contact() {
             <div className="container mx-auto text-white text-center pb-18 px-8">
                 <Header />
 
-                <h1 className='pt-36'>Vous venez de scanner mon QR code.</h1>
-                <p>Sites web, automatisations, systèmes sur mesure — je construis l&apos;écosystème digital qui fait tourner votre entreprise sans vous épuiser.</p>
+                <p className='pt-36 pb-6 text-xs uppercase tracking-widest'>Vous venez de scanner mon QR code.</p>
+                <h1>Ici, rien n&apos;a été fait en 30 secondes.</h1>
+                <p className='h5 pt-8 pb-4'>Et ça se voit en 3.</p>
+                <p>L&apos;IA, je l&apos;utilise : comme un outil, pas comme un raccourci. Sites web, automatisations, systèmes sur mesure — je construis l&apos;écosystème digital qui fait tourner votre entreprise sans vous épuiser.</p>
             </div>
         </section>
 
 
-        <section id="concretement">
+        <section id='plan'>
             <div className="container mx-auto py-36 px-8">
-                <h2 className='mb-12'>Ce que ça donne concrètement</h2>
+                <h2 className='mb-4'>Les pièces de votre écosystème</h2>
+                <p className='mb-12'>Une seule ou toutes ensemble : chaque pièce se construit pour s&apos;emboîter avec les autres.</p>
+                <ServicesPlan />
+            </div>
+        </section>
+
+
+        <section id="concretement" className='gradient-primary'>
+            <div className="container mx-auto py-36 px-8 text-white">
+                <h2 className='mb-4'>Ce que ça donne concrètement</h2>
+                <p className='mb-12'>Un site généré se ressemble partout. Ce qui fait la différence, c&apos;est ce qu&apos;il y a derrière.</p>
                 <FadeInStagger staggerDelay={0.15}>
                     {benefits.map((benefit) => (
                         <p key={benefit} className='h3 mb-6'>{benefit}</p>
@@ -76,7 +89,11 @@ export default function Contact() {
 
         <section id='cta' className='gradient-primary'>
             <div className="container mx-auto py-36 px-8 text-center text-white">
-                <Button href='/reserver-appel'>Réserver un premier échange</Button>
+                <FadeInStagger staggerDelay={0.15}>
+                    <h2>Et votre site, il se voit en combien de secondes ?</h2>
+                    <p className='py-8'>Parlez-moi de votre activité et de ce qui vous freine : on regarde ensemble ce qui peut être construit.</p>
+                    <Button href='/reserver-appel'>Réserver un premier échange</Button>
+                </FadeInStagger>
             </div>
         </section>
 

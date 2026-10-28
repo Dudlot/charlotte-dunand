@@ -31,7 +31,7 @@ export default function Header() {
               <NavLinkDropdown label="Services" subLinks={servicesLinks} />
               <NavLink href="/vision">Vision</NavLink>
               <NavLink href="/journal">Journal</NavLink>
-              <NavLink href="/contact">Contact</NavLink>
+              <NavLink href="/reserver-appel">Contact</NavLink>
             </ul>
           </nav>
 
@@ -75,7 +75,7 @@ export default function Header() {
           <MobileNavAccordion label="Services" subLinks={servicesLinks} onLinkClick={() => setIsOpen(false)} />
           <NavLink href="/vision" onClick={() => setIsOpen(false)}>Vision</NavLink>
           <NavLink href="/journal" onClick={() => setIsOpen(false)}>Journal</NavLink>
-          <NavLink href="/contact" onClick={() => setIsOpen(false)}>Contact</NavLink>
+          <NavLink href="/reserver-appel" onClick={() => setIsOpen(false)}>Contact</NavLink>
         </ul>
       </div>
     </header>

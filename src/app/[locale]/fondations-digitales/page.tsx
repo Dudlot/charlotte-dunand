@@ -70,7 +70,7 @@ export default async function FondationsDigitales() {
 
                 <h1 className='h5 pt-36'>Fondations Digitales</h1>
                 <h2 className='h1'>Votre présence digitale est la première impression que vous donnez. Faisons en sorte qu&apos;elle soit à la hauteur.</h2>
-                <Button href="/reserver-appel">Remplir mon brief</Button>
+                <Button href="/reserver-appel">Réserver un échange</Button>
             </div>
         </section>
 
@@ -157,7 +157,7 @@ export default async function FondationsDigitales() {
                     <p className='py-8'>Vous avez besoin d&apos;un site, mais aussi de quelqu&apos;un qui pense la stratégie derrière</p>
                     <h3 className='pt-8'>Prêt à poser des fondations qui vous portent ?</h3>
                     <p>Que vous partiez de zéro ou que vous ayez déjà un site, la première étape est la même : parlons de votre projet.</p>
-                    <Button href='/reserver-appel'>Remplir mon brief</Button>
+                    <Button href='/reserver-appel'>Réserver un échange</Button>
                 </FadeInStagger>
             </div>
         </section>

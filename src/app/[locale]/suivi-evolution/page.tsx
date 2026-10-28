@@ -112,7 +112,7 @@ export default async function SuiviEvolution() {
         heading="On grandit avec vous"
         intro="Le suivi de votre écosystème n'est pas figé, il évolue avec vos besoins. Voici comment ça se structure, du socle indispensable à l'accompagnement growth."
         ctaHref="/reserver-appel"
-        ctaLabel="Remplir mon brief"
+        ctaLabel="Réserver un échange"
         offres={[
            {
   title: "Sécurité & Stabilité",

@@ -115,6 +115,23 @@ export default function Vision() {
         </section>
       
 
+        <section id='avis'>
+            <div className="container mx-auto py-36 px-8">
+                <h2 className='mb-12'>Ils en parlent mieux que moi</h2>
+                <FadeInStagger staggerDelay={0.15} className="columns-1 md:columns-2 gap-12" itemClassName="break-inside-avoid mb-12">
+                    {avis.map((item) => (
+                        <figure key={item.name}>
+                            <blockquote>
+                                <p>« {item.text} »</p>
+                            </blockquote>
+                            <figcaption className='pt-4 text-xs text-[var(--cerise)]'>{item.name}, {item.domain}</figcaption>
+                        </figure>
+                    ))}
+                </FadeInStagger>
+            </div>
+        </section>
+
+
         <div id="geneve">
             <div className="flex flex-col sm:flex-row">
                 <div className="flex-1 py-36 px-8">
@@ -130,31 +147,12 @@ export default function Vision() {
         </div>
 
 
-        <section id='avis'>
-            <div className="container mx-auto py-36 px-8">
-                <h2 className='mb-12'>Ils en parlent mieux que moi</h2>
-                <div className="columns-1 md:columns-2 gap-12">
-                    <FadeInStagger staggerDelay={0.15}>
-                        {avis.map((item) => (
-                            <figure key={item.name} className='break-inside-avoid mb-12'>
-                                <blockquote>
-                                    <p>« {item.text} »</p>
-                                </blockquote>
-                                <figcaption className='pt-4 text-xs text-[var(--cerise)]'>{item.name}, {item.domain}</figcaption>
-                            </figure>
-                        ))}
-                    </FadeInStagger>
-                </div>
-            </div>
-        </section>
-
-
         <section id='for' className='gradient-primary'>
             <div className="container mx-auto py-36 px-8 text-center text-white">
                 <FadeInStagger staggerDelay={0.15}>
                     <h2>Envie de construire quelque chose ensemble ?</h2>
                     <p className='py-8'>Maintenant que vous savez qui se cache derrière l&apos;écran, parlons de votre projet.</p>
-                    <Button href='/reserver-appel'>Remplir mon brief</Button>
+                    <Button href='/reserver-appel'>Réserver un échange</Button>
                 </FadeInStagger>
             </div>
         </section>

@@ -1043,3 +1043,87 @@ gap: 1.25rem;
     line-height: 1.2;
   }
  }
+/**** ---- Contact (QR code) ---- ****/
+/* Les services dessinés comme les pièces d'un plan : chaque pièce porte ses murs (ombre de 1.5px qui comble l'espacement) */
+.contact-plan {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px;
+  padding: 1.5px;
+}
+
+.contact-room {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 7rem;
+  padding: 1rem;
+  color: #fff;
+  background-color: var(--vin);
+  box-shadow: 0 0 0 1.5px #fff;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.contact-room-number {
+  position: absolute;
+  top: 0.75rem;
+  left: 1rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-room-name {
+  font-weight: 600;
+  line-height: 1.1;
+  font-size: 1.15rem;
+}
+
+.contact-room-note {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  padding-top: 0.25rem;
+}
+
+.contact-room-lg {
+  grid-column: span 2;
+  min-height: 10rem;
+}
+
+.contact-room-lg .contact-room-name {
+  font-size: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .contact-plan {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, minmax(9rem, auto));
+    grid-template-areas:
+      "vitrine vitrine boutique boutique billet resa"
+      "vitrine vitrine boutique boutique automat automat"
+      "crm multi blog blog automat automat"
+      "membre paiement news news dash dash";
+  }
+  .contact-room {
+    min-height: 0;
+    padding: 1.5rem;
+  }
+  .contact-room-vitrine { grid-area: vitrine; }
+  .contact-room-boutique { grid-area: boutique; }
+  .contact-room-billet { grid-area: billet; }
+  .contact-room-resa { grid-area: resa; }
+  .contact-room-automat { grid-area: automat; }
+  .contact-room-crm { grid-area: crm; }
+  .contact-room-multi { grid-area: multi; }
+  .contact-room-blog { grid-area: blog; }
+  .contact-room-membre { grid-area: membre; }
+  .contact-room-paiement { grid-area: paiement; }
+  .contact-room-news { grid-area: news; }
+  .contact-room-dash { grid-area: dash; }
+  .contact-room-lg .contact-room-name {
+    font-size: 2rem;
+  }
+}

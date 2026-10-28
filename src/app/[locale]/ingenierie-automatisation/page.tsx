@@ -70,7 +70,7 @@ export default async function IngenierieAutomatisation() {
 
                 <h1 className='h5 pt-36'>Ingénierie & Automatisations</h1>
                 <h2 className='h1'>Plus vous grandissez, plus vos outils se multiplient. À un moment, c&apos;est vous qui devenez la pièce manquante entre eux.</h2>
-                <Button href="/reserver-appel">Remplir mon brief</Button>
+                <Button href="/reserver-appel">Réserver un échange</Button>
             </div>
         </section>
 
@@ -137,7 +137,7 @@ export default async function IngenierieAutomatisation() {
       ],
       // Prix affiché en police manuscrite (Calloveya) : pas d'accents
       price: "Tarif defini apres audit",
-      ctaHref: "/reserver-appel",
+      ctaHref: "/shop/audit-digital",
       ctaLabel: "Démarrer par l'audit",
     },
   ]}
@@ -155,7 +155,7 @@ export default async function IngenierieAutomatisation() {
                     <p className='py-8'>Vous voulez de la clarté avant d&apos;investir dans de nouveaux outils</p>
                     <h3 className='pt-8'>Prêt à faire respirer votre écosystème ?</h3>
                     <p>La première étape, c&apos;est l&apos;audit. En une analyse, vous saurez exactement où se situent les frictions et ce qui peut être amélioré.</p>
-                    <Button href='/'>Remplir mon brief</Button>
+                    <Button href='/reserver-appel'>Réserver un échange</Button>
                 </FadeInStagger>
             </div>
         </section>
